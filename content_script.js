@@ -1,8 +1,6 @@
-// From EME Logger extension
-
 script_urls = [
     'https://cdn.rawgit.com/ricmoo/aes-js/master/index.js',
-    'https://cdn.rawgit.com/Caligatio/jsSHA/master/src/sha.js'
+    'https://cdn.rawgit.com/Caligatio/jsSHA/master/dest/sha.js'
 ]
 
 urls = [
@@ -11,7 +9,7 @@ urls = [
 ]
 
 // very messy workaround for accessing chrome storage outside of background / content scripts
-chrome.storage.sync.get(['use6Channels', 'setMaxBitrate'], function(items) {
+browser.storage.sync.get(['use6Channels', 'setMaxBitrate'], function(items) {
     var use6Channels = items.use6Channels;
     var setMaxBitrate = items.setMaxBitrate;
     var mainScript = document.createElement('script');
