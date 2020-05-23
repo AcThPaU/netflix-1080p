@@ -40,6 +40,5 @@ for (var i = 0; i < urls.length; i++) {
             document.documentElement.appendChild(mainScript);
         }
     };
-
   xhr.send();
 }
